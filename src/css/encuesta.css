@@ -1,0 +1,465 @@
+/* ========================================
+   ENCUESTA
+======================================== */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+
+/* ========================================
+   CONTENEDOR
+======================================== */
+
+.survey-page {
+    min-height: 100vh;
+    padding: 40px 20px 70px;
+}
+
+.survey-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   LAYOUT DE ENCUESTA + NAVEGACIÓN
+======================================== */
+
+.survey-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.survey-container {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.survey-header {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+}
+
+.survey-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #4f46e5;
+}
+
+.survey-header h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.survey-header > p {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+
+/* ========================================
+   INSTRUCCIONES
+======================================== */
+
+.instructions {
+    display: flex;
+    gap: 15px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.instruction-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    background: #f9fafb;
+    border-radius: 10px;
+}
+
+.instruction-number {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #4f46e5;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.instruction-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.instruction-item strong {
+    font-size: 14px;
+}
+
+.instruction-item span:not(.instruction-number) {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+/* ========================================
+   PREGUNTAS
+======================================== */
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.question-card {
+    display: flex;
+    gap: 18px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.question-card:hover {
+    border-color: #c7d2fe;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.question-number {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.question-content {
+    flex: 1;
+}
+
+.question-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #374151;
+    margin-bottom: 16px;
+}
+
+
+/* ========================================
+   RESPUESTAS
+======================================== */
+
+.answers {
+    display: flex;
+    gap: 10px;
+}
+
+.answer-option {
+    cursor: pointer;
+    flex: 0 0 100px;
+}
+
+.answer-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.answer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 9px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #4b5563;
+    font-size: 14px;
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        color 0.2s;
+}
+
+.answer-button strong {
+    font-size: 13px;
+}
+
+.answer-option:hover .answer-button {
+    border-color: #a5b4fc;
+    background: #f5f3ff;
+}
+
+
+/* Respuesta seleccionada */
+
+.answer-option input:checked + .answer-button {
+    border-color: #4f46e5;
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   BOTÓN FINAL
+======================================== */
+
+.survey-submit {
+    margin-top: 25px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.survey-submit p {
+    margin-bottom: 18px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.survey-submit button {
+    width: 100%;
+    max-width: 350px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+.survey-submit button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   PANEL DE PREGUNTAS
+======================================== */
+
+.question-navigation {
+    width: 260px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 25px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.navigation-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6b7280;
+}
+
+.navigation-header h2 {
+    margin: 5px 0;
+    font-size: 22px;
+}
+
+.navigation-header p {
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ========================================
+   NÚMEROS
+======================================== */
+
+.question-numbers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.question-number-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #f1f3f5;
+    color: #374151;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.question-number-link:hover {
+    background: #e2e5e8;
+    transform: translateY(-1px);
+}
+
+
+/* Pregunta respondida */
+
+.question-number-link.answered {
+    background: #22c55e;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   NAVEGACIÓN 50 / 30
+======================================== */
+
+.hidden-question {
+    display: none;
+}
+
+.navigation-toggle {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .survey-layout {
+        flex-direction: column;
+    }
+
+    .question-navigation {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .question-numbers {
+        grid-template-columns: repeat(10, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .survey-page {
+        padding: 20px 12px 50px;
+    }
+
+    .survey-header {
+        padding: 28px 20px;
+    }
+
+    .survey-header h1 {
+        font-size: 25px;
+    }
+
+    .instructions {
+        flex-direction: column;
+    }
+
+    .question-card {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .question-number {
+        width: 32px;
+        height: 32px;
+    }
+
+    .question-content p {
+        font-size: 14px;
+    }
+
+    .answers {
+        width: 100%;
+    }
+
+    .answer-option {
+        flex: 1;
+    }
+
+    .answer-button {
+        width: 100%;
+    }
+
+    .survey-submit {
+        padding: 25px 18px;
+    }
+
+    .question-numbers {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}

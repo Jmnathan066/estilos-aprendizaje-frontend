@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/src/css/panel.css">
+<script type="module" src="/src/js/panel.js"></script>
+<title>Panel del profesor</title>
+</head>
+<body>
+
+
+
+<main class="panel-page">
+
+    <section class="panel-container">
+
+        <header class="panel-header">
+
+            <div>
+                <span class="panel-label">
+                    ADMINISTRACIÓN
+                </span>
+
+                <h1>
+                    Panel del profesor
+                </h1>
+
+                <p>
+                    Consulta y administra los resultados de los estudiantes.
+                </p>
+            </div>
+
+            <form id="logoutForm">
+                
+
+                <button type="submit" class="logout-button">
+                    Cerrar sesión
+                </button>
+            </form>
+
+        </header>
+
+
+        <section class="results-section">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">
+                        RESULTADOS
+                    </span>
+
+                    <h2>
+                        Resultados de estudiantes
+                    </h2>
+                </div>
+
+                <a href="#" id="excelBtn" class="excel-button">
+                    Descargar Excel
+                </a>
+
+            </div>
+
+
+            <form id="filterForm" class="filter-form">
+
+                <div class="filter-field">
+
+                    <label for="grado">
+                        Filtrar por grado
+                    </label>
+
+                    <select name="grado" id="grado"><option value="">Todos los grados</option></select>
+
+                </div>
+
+                <button type="submit" class="filter-button">
+                    Buscar
+                </button>
+
+            </form>
+
+
+            <div class="table-wrapper">
+
+                <table class="results-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Estudiante</th>
+                            <th>Grado</th>
+                            <th>Activo</th>
+                            <th>Reflexivo</th>
+                            <th>Teórico</th>
+                            <th>Pragmático</th>
+                            <th>Estilo</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tbody"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+</body>
+</html>

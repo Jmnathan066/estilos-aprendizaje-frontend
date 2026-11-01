@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Datos del estudiante</title>
+
+<link rel="stylesheet" href="/src/css/formulario.css">
+<script type="module" src="/src/js/formulario.js"></script>
+
+
+</head>
+
+<body>
+
+
+<main class="student-page">
+
+    <section class="student-card">
+
+        <div class="student-header">
+            <h1>Datos del estudiante</h1>
+
+            <p>
+                Antes de comenzar la encuesta, completa tus datos.
+            </p>
+        </div>
+
+        <form id="studentForm" class="student-form">
+
+            
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ingresa tu nombre"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="segundo_nombre">Segundo nombre</label>
+
+                    <input
+                        type="text"
+                        id="segundo_nombre"
+                        name="segundo_nombre"
+                        placeholder="Opcional"
+                    >
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+
+                    <input
+                        type="text"
+                        id="apellido"
+                        name="apellido"
+                        placeholder="Ingresa tu apellido"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="segundo_apellido">Segundo apellido</label>
+
+                    <input
+                        type="text"
+                        id="segundo_apellido"
+                        name="segundo_apellido"
+                        placeholder="Opcional"
+                    >
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@correo.com"
+                >
+
+                <small>
+                    Opcional. Podrás proporcionarlo posteriormente
+                    para recibir el material relacionado con tu resultado.
+                </small>
+            </div>
+
+            <div class="form-group">
+            <label for="curso">Grado</label>
+
+            <select
+                id="curso"
+                name="curso"
+                required
+            >
+                <option value="" disabled selected>
+                    Selecciona tu grado
+                </option>
+
+                                    <option value="4">4°</option>
+                    <option value="5">5°</option>
+                    <option value="6">6°</option>
+                    <option value="7">7°</option>
+                    <option value="8">8°</option>
+                    <option value="9">9°</option>
+                    <option value="10">10°</option>
+                    <option value="11">11°</option>
+            </select>
+        </div>
+
+            <button type="submit" class="student-button">
+                Comenzar encuesta
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+</body>
+</html>

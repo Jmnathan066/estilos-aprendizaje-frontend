@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/src/css/resultado.css">
+<script type="module" src="/src/js/resultado.js"></script>
+<title>Resultado - Estilos de Aprendizaje</title>
+</head>
+<body>
+
+
+
+<main class="result-page">
+
+    <section class="result-card">
+
+<span class="result-label">
+    RESULTADO
+</span>
+
+<h1>
+    Tu estilo de aprendizaje
+</h1>
+
+<p class="result-student" id="nombre"></p>
+
+<div class="learning-style" id="estilo"></div>
+
+<div class="scores">
+
+    <div class="score">
+        <span>Activo</span>
+        <strong id="p-activo"></strong>
+    </div>
+
+    <div class="score">
+        <span>Reflexivo</span>
+        <strong id="p-reflexivo"></strong>
+    </div>
+
+    <div class="score">
+        <span>Teórico</span>
+        <strong id="p-teorico"></strong>
+    </div>
+
+    <div class="score">
+        <span>Pragmático</span>
+        <strong id="p-pragmatico"></strong>
+    </div>
+
+</div>
+
+
+<div class="support-material">
+
+    <h2>
+        ¿Quieres conocer más sobre tu resultado?
+    </h2>
+    <br>
+
+    <p>
+    Recibirás un material breve sobre tu estilo de aprendizaje,
+    con sus características, ejemplos para aplicarlo y consejos
+    para aprovecharlo mejor, Claro, práctico y fácil de consultar.
+</p>
+
+    <br>
+
+</div>
+
+
+<div class="email-section">
+
+    <h2>Recibe el material de apoyo</h2>
+
+    <p>
+        Ingresa tu correo electrónico para recibir el documento.
+    </p>
+
+    <form id="correoForm">
+
+        
+
+        <label for="correo">
+            Correo electrónico
+        </label>
+
+        <input
+            type="email"
+            id="correo"
+            name="correo"
+            
+            placeholder="ejemplo@correo.com"
+            required
+        >
+
+        <button type="submit">
+            Enviar material
+        </button>
+
+
+
+    </form>
+
+    <a href="/index.html" class="logout-button">
+    Salir
+</a>
+    
+    <p class="success-message" id="mensaje" style="display:none"></p>
+
+
+    
+</div>
+
+</section>
+
+</main>
+</body>
+</html>

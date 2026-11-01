@@ -1,0 +1,269 @@
+/* ========================================
+   RESULTADO
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+
+/* ========================================
+   CONTENEDOR
+======================================== */
+
+.result-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+
+/* ========================================
+   TARJETA
+======================================== */
+
+.result-card {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    text-align: center;
+}
+
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.result-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #4f46e5;
+}
+
+.result-card h1 {
+    margin-bottom: 8px;
+    font-size: 30px;
+    color: #111827;
+}
+
+.result-student {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+/* ========================================
+   ESTILO DE APRENDIZAJE
+======================================== */
+
+.learning-style {
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 12px;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   PUNTAJES
+======================================== */
+
+.scores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.score {
+    padding: 18px 10px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.score span {
+    display: block;
+    margin-bottom: 8px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.score strong {
+    font-size: 24px;
+    color: #111827;
+}
+
+
+/* ========================================
+   CORREO
+======================================== */
+
+.email-section {
+    padding-top: 28px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.email-section h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.email-section > p {
+    margin-bottom: 20px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.email-section form {
+    text-align: left;
+}
+
+.email-section label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.email-section label span {
+    font-weight: 400;
+    color: #9ca3af;
+}
+
+.email-section input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.email-section input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.email-section button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+.email-section button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 30px;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* ========================================
+   MENSAJE
+======================================== */
+
+.success-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 14px;
+}
+
+.logout-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 24px;
+
+    background: #e5e7eb;
+    color: #374151;
+
+    border-radius: 8px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: background 0.2s;
+}
+
+.logout-button:hover {
+    background: #d1d5db;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .result-page {
+        padding: 20px 12px;
+    }
+
+    .result-card {
+        padding: 28px 20px;
+    }
+
+    .result-card h1 {
+        font-size: 25px;
+    }
+
+    .learning-style {
+        font-size: 20px;
+    }
+
+    .scores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Iniciar sesión</title>
+
+<link rel="stylesheet" href="/src/css/login.css">
+<script type="module" src="/src/js/login.js"></script>
+
+</head>
+
+<body>
+
+<main class="login-page">
+
+    <section class="login-card">
+
+        <div class="login-header">
+            <h1>Iniciar sesión</h1>
+            <p>Acceso para profesores/admin</p>
+        </div>
+
+        <div class="error-message" id="loginError" style="display:none"></div>
+
+        <form id="loginForm" class="login-form">
+            
+
+            <div class="form-group">
+                <label for="username">Usuario</label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Ingresa tu usuario"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+    <label for="password">Contraseña</label>
+
+    <div class="password-wrapper">
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Ingresa tu contraseña"
+            required
+        >
+
+        <button
+            type="button"
+            class="toggle-password"
+            id="togglePassword"
+            aria-label="Mostrar contraseña"
+        >
+            👁
+        </button>
+
+    </div>
+</div>
+
+            <button type="submit" class="login-button">
+                Ingresar
+            </button>
+        </form>
+
+        <div class="student-access">
+
+            <span>¿Eres estudiante?</span>
+
+            <a href="/formulario.html">
+                Realizar encuesta
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+<!-- Información del proyecto -->
+
+<div class="project-info" id="projectInfo">
+
+    <button
+        type="button"
+        class="project-info-close"
+        id="projectInfoClose"
+        aria-label="Cerrar información"
+    >
+        ×
+    </button>
+
+    <div class="project-info-icon">
+        ✦
+    </div>
+
+    <div class="project-info-content">
+
+        <span class="project-info-label">
+            Proyecto
+        </span>
+
+        <h2>
+            Cuestionario Honey-Alonso
+        </h2>
+
+        <p>
+            Sistema de evaluación de estilos de aprendizaje
+        </p>
+
+        <div class="project-info-author">
+
+            <span>
+                Desarrollado por:
+            </span>
+
+            <strong>
+                Jonathan David Marceles Herrera
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button
+    type="button"
+    class="project-info-mini"
+    id="projectInfoMini"
+    aria-label="Ver información del proyecto"
+>
+    ⓘ
+</button>
+
+
+</body>
+
+</html>

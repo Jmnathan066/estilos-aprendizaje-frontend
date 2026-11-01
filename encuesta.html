@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuestionario de estilos de aprendizaje</title>
+<link rel="stylesheet" href="/src/css/encuesta.css">
+<script type="module" src="/src/js/encuesta.js"></script>
+</head>
+<body>
+<main class="survey-page">
+  <div class="survey-layout">
+    <section class="survey-container">
+      <header class="survey-header">
+        <span class="survey-label">CUESTIONARIO</span>
+        <h1>Honey-Alonso de Estilos de Aprendizaje</h1>
+        <p>Lee cada afirmación y selecciona la opción que mejor represente tu respuesta.</p>
+        <div class="instructions">
+          <div class="instruction-item"><span class="instruction-number">1</span><div><strong>Sí</strong><span>Estoy de acuerdo</span></div></div>
+          <div class="instruction-item"><span class="instruction-number">0</span><div><strong>No</strong><span>No estoy de acuerdo</span></div></div>
+        </div>
+      </header>
+
+      <form id="surveyForm" class="survey-form" novalidate>
+        <div class="questions" id="questions"></div>
+        <div class="survey-submit">
+          <p id="surveyMsg">Revisa tus respuestas antes de finalizar. Todas las preguntas deben estar respondidas.</p>
+          <button type="submit" id="surveyBtn">Enviar respuestas</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="question-navigation">
+      <div class="navigation-header">
+        <span class="navigation-label">PROGRESO</span>
+        <h2>Preguntas</h2>
+        <p><strong id="answered-count">0</strong> de 80 respondidas</p>
+      </div>
+      <div class="question-numbers" id="questionNumbers"></div>
+      <button type="button" id="navigation-toggle" class="navigation-toggle" aria-label="Mostrar preguntas 51 a 80">↓</button>
+    </aside>
+  </div>
+</main>
+</body>
+</html>
